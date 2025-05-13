@@ -31,6 +31,9 @@ const App = () => {
 
   return (
     <>
+      <h1 class="fixed inset-0 flex items-center justify-center text-3xl font-bold text-white z-50">
+        SYDE WEBRING
+        </h1>
       <ForceGraph3D
         ref={fgRef}
         graphData={graphData}
@@ -43,7 +46,8 @@ const App = () => {
         const updatedNodes = [...graphData.nodes, newNode];
         const updatedLinks = generateLinks(updatedNodes);
         setGraphData({ nodes: updatedNodes, links: updatedLinks });
-      }} />
+      }} 
+      />
     </>
   );
 };
